@@ -7,3 +7,6 @@
 [submodule "lab03-2022"]
 	path = lab03-2022
 	url = https://gitlab.di.unimi.it/sameera.kaluwaduge/lab03-2022.git
+[submodule "lab04-2022"]
+	path = lab04-2022
+	url = https://gitlab.di.unimi.it/sameera.kaluwaduge/lab04-2022.git
