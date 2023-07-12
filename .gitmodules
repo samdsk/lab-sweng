@@ -19,3 +19,6 @@
 [submodule "lab07-2022-valutato"]
 	path = lab07-2022-valutato
 	url = https://gitlab.di.unimi.it/sameera.kaluwaduge/lab07-2022-valutato.git
+[submodule "katamaestro"]
+	path = katamaestro
+	url = https://gitlab.di.unimi.it/sameera.kaluwaduge/katamaestro
