@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id "org.unbroken-dome.test-sets" version "4.0.0"
+}
+
+application.mainClass = 'it.unimi.di.sweng.esame.Main'
+
+javafx {
+    version = '17'
+    modules = [ 'javafx.controls']
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+testSets {
+    integrationTest
+}
+
+dependencies {
+    implementation 'org.jetbrains:annotations:24.0.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+
+    testImplementation 'org.hamcrest:hamcrest-core:2.2'
+    testImplementation 'org.mockito:mockito-core:5.2.0'
+
+    integrationTestImplementation "org.testfx:testfx-junit5:4.0.16-alpha"
+    integrationTestImplementation 'org.testfx:testfx-core:4.0.16-alpha'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+integrationTest {
+    useJUnitPlatform();
+}
+
+
+check.dependsOn integrationTest
+integrationTest.mustRunAfter test
+
